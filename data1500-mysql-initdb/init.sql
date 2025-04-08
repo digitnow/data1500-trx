@@ -1,0 +1,17 @@
+CREATE DATABASE kap10;
+
+CREATE USER 'u_kap10_25'@'localhost' IDENTIFIED BY '123.Kap10#';
+GRANT CREATE ON kap10.* TO 'u_kap10_25'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON kap10.* TO 'u_kap10_25'@'localhost';
+CREATE USER 'u_kap10_25'@'%' IDENTIFIED BY '123.Kap10#';
+GRANT USAGE ON kap10.* TO 'u_kap10_25'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE ON `kap10`.* TO 'u_kap10_25'@'%';
+USE kap10;
+
+CREATE TABLE Konto (
+    KontoId INT AUTO_INCREMENT PRIMARY KEY,
+    KontoNavn VARCHAR(50) NOT NULL,
+    Balanse DECIMAL(10, 2) NOT NULL
+);
+
+INSERT INTO Konto (KontoNavn, Balanse) VALUES ('Alice', 1000.00), ('Bob', 500.00);
