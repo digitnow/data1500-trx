@@ -9,13 +9,13 @@ docker-compose up
 ```
 
 Det er implementert 3 stier i Transactions.java:
-- http://localhost:5005/trx/
-- http://localhost:5005/trx/balance
+- `http://localhost:5005/trx/`
+- `http://localhost:5005/trx/balance`
 
 og en sti med POST-metode:
-- http://localhost:5005/trx/update
+- `http://localhost:5005/trx/update`
 
-For å teste stien med POST-metoden kan du installere curl direkte på din datamaskin (se curl.se) og utføre kommandoen:
+For å teste stien med POST-metoden kan du installere curl direkte på din datamaskin (se [Curl hjemmeside](https://curl.se)) og utføre kommandoen:
 ```
 curl -X POST http://localhost:5005/trx/update
 ```
